@@ -29,7 +29,7 @@ while (($line = fgets($stdin, 256)) !== false) {
 $curl = new Curl\Curl();
 $curl->setBasicAuthentication($config['username'].'', '');
 $curl->post('https://api.pushback.io/v1/send', array(
-    'id'    => $config['username'].'',
+    'id'    => $config['user_id'].'',
     'title' => $subject,
     'body'  => $msg,
 ));
